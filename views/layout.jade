@@ -2,13 +2,9 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link( rel='stylesheet', href='/stylesheets/style.css' )
+    link( href="/stylesheets/bootstrap.min.css", rel="stylesheet" )
     
-    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin="anonymous")
-
-    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css", integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r", crossorigin="anonymous")
-
-    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js", integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS", crossorigin="anonymous")
   body
     .container
       nav.navbar.navbar-default
@@ -26,9 +22,23 @@ html
               li.active: a( href="#") Home
               li: a( href="#") About
               li: a( href="#") Home
+              li.dropdown
+                a.dropdown-toggle( href="#", data-toggle="dropdown", role="button", aria-expanded="false" ) Dropdown 
+                    span.caret
+                ul.dropdown-menu( role="menu" )
+                    li: a( href="#" ) Action
+                    li: a( href="#" ) Another action
+                    li: a( href="#" ) Something else here
+                    li.divider
+                    li.dropdown-header Nav header
+                    li: a( href="#" ) Separated link
+                    li: a( href="#" ) One more separated link
               
             ul.nav.navbar-nav.navbar-right
               li.active: a( href="#") Default
               li: a( href="/login") login
               li: a( href="/register") register
         block content
+    script( src="http://code.jquery.com/jquery-1.11.3.min.js" )
+    script( src="/javascripts/bootstrap.min.js")
+

@@ -3,6 +3,7 @@ var router = express.Router();
 var passport = require('passport');
 
 router.get('/', function(req, res) {
+  console.log('path ' + express.path);
   res.render('login', { user : req.user });
 });
 

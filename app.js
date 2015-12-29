@@ -15,8 +15,6 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var cookieSession = require('cookie-session');
 
-var admin = require('sriracha-admin');
-
 var app = express();
 
 // view engine setup
@@ -34,8 +32,6 @@ app.use(cookieSession({
   keys: ['key1', 'key2']
 }));
 app.use(express.static(path.join(__dirname, 'public')));
-
-app.use('/admin', admin());
 
 // passport config
 app.use(passport.initialize());
